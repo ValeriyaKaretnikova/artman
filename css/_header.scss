@@ -1,0 +1,110 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+header {
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  .navigation {
+    padding: 0 1rem;
+    .topnav {
+      color: $font-grey;
+      font-size: 9px;
+      padding: 0.5rem;
+      justify-content: center;
+      border-bottom: 1px solid $border-grey;
+      div:first-child {
+        padding-right: 2%;
+        border-right: 1px solid $border-grey;
+      }
+      div:last-child {
+        padding-left: 2%;
+      }
+      .data {
+        color: $lightgrey;
+        a {
+          font-size: 9px;
+        }
+      }
+      
+    }
+    .mainnav {
+      padding: 0.5rem 0;
+      .logo {
+        width: 150px;
+        height: auto;
+      }
+      .hamburger-btn svg {
+        fill: $orange;
+        border: 2px solid $orange;
+        border-radius: 2px;
+        cursor: pointer;
+        @include break(med) {
+          visibility: hidden;
+          opacity: 0;
+          max-width: 0;
+        }
+      }
+      .menu {
+        padding: 0 1rem;
+        max-height: 0;
+        overflow: hidden;
+        background-color: $graphit;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        transition: all 0.7s ease-in-out;
+        z-index: 25;
+        @include break(med) {
+          position: static;
+          max-height: initial;
+          width: auto;
+          background-color: transparent;
+        }
+        .menu-links {
+          li {
+            line-height: 2rem;
+            margin: 0 0.3rem;
+          }
+          a {
+            font-family: "Raleway", sans-serif;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: white;
+            display: block;
+            padding: 0.5rem;
+            &:hover {
+              cursor: pointer;
+              color: $orange;
+            }
+            @include break(med) {
+              color: $graphit;
+            }
+            @include break(wide) {
+              font-size: 0.9rem;
+              &:hover {
+                color: $orange;
+              }
+            }
+          }
+          @include break(med) {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+      .show-nav {
+        max-height: 100vh;
+      }
+      @include break(med) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,779 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+/*----------------------------------------------Banner--------------------------------------------------*/
+
+.banner {
+    background-color: $graphit;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../img/banner-7.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    @include break(wide) {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("../img/banner-2.jpg");
+      }
+  .banner-item {
+    padding: 6rem 2rem;
+    text-align: center;
+    @include break(small) {
+      padding: 7rem 2rem;
+    }
+    @include break(med) {
+      padding: 10rem 2rem;
+    }
+    @include break(wide) {
+      padding: 12rem 2rem;
+    }
+    animation: animate 3s ease-in-out forwards;
+  }
+  @keyframes animate {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  h2 {
+    color: $orange;
+    text-transform: uppercase;
+    font-weight: bold;
+    animation: animateHeading 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    @include break(small) {
+      font-size: 3rem;
+    }
+  }
+
+  @keyframes animateHeading {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  p {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    overflow: hidden;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+    @include break(small) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// ---------------------------Inquiry------------------------------------------
+.inquiry {
+  margin: 1rem;
+
+  .inquiry-text {
+    background-color: $orange;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2px;
+    p {
+      color: white;
+      font-size: 0.8rem;
+      margin: 0 0 0.5rem;
+    }
+    h5 {
+      text-transform: uppercase;
+      margin: 0;
+    }
+  }
+
+  .inquiry-button {
+    background-color: $orange;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2px;
+    a {
+      text-transform: uppercase;
+      background-color: $graphit;
+      padding: 0.8rem 3rem;
+      border-radius: 3px;
+      font-weight: bold;
+      transition: all 0.3s linear;
+      &:hover {
+        cursor: pointer;
+        color: $offblack;
+        background-color: $offwhite;
+      }
+    }
+  }
+  @include break(med) {
+    position: absolute;
+    right: 0;
+    z-index: 5;
+    margin-top: -6.5rem;
+    width: 300px;
+    height: auto;
+  }
+  @include break(wide) {
+    width: 500px;
+    left: 45%;
+  }
+}
+
+/*----------------------------About Us---------------------------------------------*/
+
+.about {
+  margin: 4rem 1rem;
+  text-align: center;
+  .about-heading:before {
+    content: "";
+    width: 70px;
+    height: 96px;
+    border: 2px solid $orange;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    display: block;
+    z-index: -1;
+  }
+  .about-heading {
+    margin-bottom: 4rem;
+    p {
+      text-align: center;
+      margin: 0 auto;
+      font-size: 14px;
+      padding: 0.8rem 0 0.2rem;
+      z-index: 2;
+      letter-spacing: -0.08em;
+    }
+    h3 {
+      margin: 0;
+      color: $offblack;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+    h3:after {
+      content: ".";
+      color: $orange;
+      font-size: 45px;
+      line-height: 1;
+      display: inline-block;
+    }
+    @include break(wide) {
+      margin: 6rem 0 2rem;
+    }
+  }
+
+  .about-text {
+    span {
+      color: $orange;
+      font-weight: bold;
+    }
+    p:last-child {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    @include break(med) {
+      margin: 0 4rem;
+    }
+  }
+}
+
+/*----------------------------Services---------------------------------------------*/
+.services {
+  background-color: $graphit;
+
+  .wrapper {
+    margin: 2rem 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    @include break(wide) {
+        margin: 2rem auto;
+      }
+  }
+
+  .services-heading:before {
+    content: "";
+    width: 70px;
+    height: 96px;
+    border: 2px solid $orange;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    display: block;
+    z-index: 0;
+  }
+  .services-heading {
+    padding: 4rem 0;
+    p {
+      margin: 0;
+      font-size: 14px;
+      padding: 0.8rem 0 0.2rem;
+      position: relative;
+      z-index: 2;
+      letter-spacing: -0.08em;
+      color: $lightgrey;
+    }
+    h3 {
+      margin: 0;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+    h3:after {
+      content: ".";
+      color: $orange;
+      font-size: 45px;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
+
+  .service {
+    padding: 2rem 1.5rem;
+    // border: 2px solid $orange;
+    border-top: 4px solid $orange;
+    border-radius: 5px;
+    box-shadow: 0px 6px 10px $font-grey;
+    margin-bottom: 2rem;
+    svg {
+      width: 80px;
+      height: auto;
+      fill: $offwhite;
+    }
+    p {
+      color: $lightgrey;
+    }
+    @include break(med) {
+      width: 45%;
+      height: auto;
+      margin-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+    @include break(wide) {
+      width: 30%;
+    }
+  }
+  .service-list {
+    @include break(med) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+}
+
+/*  ------------------------------Projects-------------------------*/
+
+.projects {
+  
+  .projects-heading:before {
+    content: "";
+    width: 70px;
+    height: 96px;
+    border: 2px solid $orange;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    display: block;
+    z-index: 0;
+  }
+  .projects-heading {
+    padding: 2rem 0 4rem 0;
+    text-align: center;
+    p {
+      margin: 0;
+      font-size: 14px;
+      padding: 0.8rem 0 0.2rem;
+      position: relative;
+      z-index: 2;
+      letter-spacing: -0.08em;
+    }
+    h3 {
+      margin: 0;
+      color: $offblack;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    h3:after {
+      content: ".";
+      color: $orange;
+      font-size: 45px;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
+  .project {
+    position: relative;
+    overflow: hidden;
+    img {
+      min-width: 100%;
+      height: auto;
+    }
+    .text p:nth-child(2) {
+      font-weight: bold;
+      text-transform: uppercase;
+      position: absolute;
+      margin: 0;
+      top: -3rem;
+      left: 2rem;
+      color: $offwhite;
+      border-radius: 2px;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+      z-index: 2;
+      font-size: 1.3rem;
+      cursor: pointer;
+      &:hover {
+        color: $orange;
+      }
+    }
+    .text p:nth-child(1) {
+      position: absolute;
+      top: -2rem;
+      left: 2rem;
+      margin: 0;
+      color: $lightgrey;
+      text-transform: uppercase;
+      border-radius: 2px;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+      z-index: 2;
+    }
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: $orange;
+      position: absolute;
+      bottom: -2rem;
+      left: 2rem;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    .project-hover {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: $graphit-trans;
+      transition: all 0.4s ease-in-out;
+    }
+    .visible {
+      opacity: 1 !important;
+    }
+    @include break(small) {
+      width: 50%;
+      height: auto;
+    }
+    @include break(wide) {
+      width: calc(100% / 3);
+      height: auto;
+    }
+  }
+  .gallery {
+    @include break(small) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding: 10%; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: $graphit-trans;
+
+    .modalContent {
+      margin: auto;
+      display: block;
+    }
+
+    .caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      text-align: center;
+      color: $offwhite;
+      padding: 10px 0;
+      height: 5rem;
+      text-transform: uppercase;
+    }
+
+    .modalContent, 
+    .caption {  
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+    
+    @keyframes zoom {
+      from {transform:scale(0)} 
+      to {transform:scale(1)}
+    }
+    
+    .close {
+      position: absolute;
+      top: 1%;
+      right: 3%;
+      color: $offwhite;
+      font-size: 2rem;
+      transition: 0.3s;
+      &:hover {
+          color: $orange;
+          cursor: pointer;
+      }
+      &:focus {
+          color: $orange;
+          cursor: pointer;
+      }
+      @include break(med) {
+          top: 4%;
+          right: 4%;
+          // font-size: 4rem;
+        }
+    }
+  }
+
+}
+
+/*------------------------Testimonials------------------------------*/
+
+.testimonials {
+  background-color: $offwhite;
+  position: relative;
+  .wrapper {
+    margin: 0rem 1rem;
+    text-align: center;
+    padding: 2rem 0.5rem;
+    @include break(wide) {
+        margin: 0 auto;
+      }
+      @include break(med) {
+       padding: 2rem 2rem;
+      }
+  }
+  .testimonials-heading:before {
+    content: "";
+    width: 70px;
+    height: 96px;
+    border: 2px solid $orange;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    display: block;
+    z-index: 0;
+  }
+  .testimonials-heading {
+    padding: 2rem 0 4rem 0;
+    text-align: center;
+    p {
+      margin: 0;
+      font-size: 14px;
+      padding: 0.8rem 0 0.2rem;
+      position: relative;
+      z-index: 2;
+      letter-spacing: -0.08em;
+    }
+    h3 {
+      margin: 0;
+      color: $offblack;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    h3:after {
+      content: ".";
+      color: $orange;
+      font-size: 45px;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
+  .slick-prev:before, 
+  .slick-next:before {
+    color: $orange;
+    font-size: 1.5rem;
+  }
+  .slick-prev {
+    left: -1.4rem;
+  }
+  .slick-next {
+    right: -1.1rem;
+  }
+
+  .slick-list,
+  .slick-track {
+    display: flex;
+  }
+ 
+  .testimonial {
+    background-color: white;
+    padding: 1rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem; 
+    border-radius: 7px;
+
+    
+    h5 {
+      color: $graphit;
+      margin-bottom: 1rem;
+      padding-top: 1rem;
+      animation: animateHeading 1s ease-in-out;
+      @keyframes animateHeading {
+        0% {
+          transform: translateX(-10rem);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0rem);
+          opacity: 1;
+        }
+      }
+    }
+    p {
+      color: $lightgrey;
+      font-style: italic;
+      font-family: "Raleway", sans-serif;
+      font-size: 0.8rem;
+      animation: animateText 1s ease-in-out;
+      @keyframes animateText {
+        0% {
+          transform: translateX(10rem);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0rem);
+          opacity: 1;
+        }
+      }
+    }
+    .name {
+      font-style: normal;
+      font-weight: bold;
+      color: $graphit;
+      animation: animateText 1s ease-in-out;
+    }
+    &:before {
+      position: absolute;
+      content: url(../img/icons/left-quote.svg);
+      left: 44%;
+      z-index: 5;
+      @include break(med) {
+        top: 2rem;
+      }
+    }
+    @include break(med) {
+      padding: 3rem;
+      width: auto;
+    }
+  }
+  .slick-dots li button {
+    &:before{
+      font-size: 10px;
+      color: $orange;
+    }
+  }
+}
+/*-------------------Join the team------------------------------*/
+
+.join-team {
+  background-image: linear-gradient($graphit-trans, $graphit-trans),
+    url("../img/worker-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .wrapper {
+    margin: 0rem 1rem 2rem;
+    text-align: center;
+    padding: 3rem 0;
+    @include break(med) {
+       margin: 0 auto;
+      }
+  }
+  .join-heading:before {
+    content: "";
+    width: 70px;
+    height: 96px;
+    border: 2px solid $orange;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    display: block;
+    z-index: 0;
+  }
+  .join-heading {
+    padding-bottom: 2rem;
+    text-align: center;
+    p {
+      margin: 0;
+      font-size: 14px;
+      padding: 0.8rem 0 0.2rem;
+      position: relative;
+      z-index: 2;
+      letter-spacing: -0.08em;
+    }
+    h3 {
+      margin: 0;
+      color: $offwhite;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+    h3:after {
+      content: ".";
+      color: $orange;
+      font-size: 45px;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
+  .message {
+    p {
+      color: $lightgrey;
+
+      a {
+        display: block;
+        margin-top: 2rem;
+        color: $orange;
+        font-style: normal;
+        font-size: 1.2rem;
+        font-family: "Raleway", sans-serif;
+      }
+    }
+    @include break(med) {
+      width: 30rem;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+/*------------------------------Contact-------------------------------*/
+.contact-form {
+  margin: 1rem;
+  .contact-text,
+  .contact-button {
+    background-color: $orange;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    margin-bottom: 2px;
+  }
+  .contact-text {
+      p {
+      color: white;
+      font-size: 0.8rem;
+      margin: 0 0 0.5rem;
+    }
+    h5 {
+        text-transform: uppercase;
+        margin: 0;
+      }
+  }
+  .contact-button a {
+    text-transform: uppercase;
+    background-color: $graphit;
+    padding: 0.8rem 3rem;
+    border-radius: 3px;
+    font-weight: bold;
+    transition: all 0.3s linear;
+    &:hover {
+      cursor: pointer;
+      color: $offblack;
+      background-color: $offwhite;
+    }
+}
+  @include break(med) {
+      flex-grow: 2;
+  }
+}
+
+/*--------------------License-----------------------------------*/
+.license {
+  margin: 4rem 0rem;
+  background-color: $offwhite;
+  transform: skewY(7deg);
+  .wrapper {
+    text-align: center;
+    transform: skewY(-7deg);
+    padding: 0 1rem;
+    @include break(med) {
+        transform: none;
+        background-color: $offwhite;
+        padding: 0;
+        height: 180px;
+        margin-left: 1rem;
+      }
+  }
+  p {
+    color: $graphit;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 3rem;
+    position: relative;
+    &:before {
+      content: url(../img/icons/quality.svg);
+      position: absolute;
+      top: -2rem;
+      left: -0.5rem;
+      @include break(med) {
+        top: -3rem;
+        left: 1rem;
+      }
+    }
+    @include break(med) {
+        margin-top:0;
+        padding-top: 1.5rem;
+      }
+  }
+  img {
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    @include break(med) {
+        padding-bottom: 0.3rem;
+      }
+  }
+  @include break(med) {
+    transform: none;
+    margin: 0;
+    flex-grow: 1;
+    background-color: white;
+  }
+}
+
+.flex-med {
+    @include break(med) {
+        display: flex;
+        align-items: center;
+      }
+}
+
+
