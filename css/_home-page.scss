@@ -610,7 +610,9 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  @include break(wide) {
+    background-attachment: fixed;
+   }
   .wrapper {
     margin: 0rem 1rem 2rem;
     text-align: center;

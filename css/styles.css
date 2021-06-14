@@ -990,7 +990,11 @@ header .navigation .mainnav .show-nav {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+}
+@media (min-width: 960px) {
+  .join-team {
+    background-attachment: fixed;
+  }
 }
 .join-team .wrapper {
   margin: 0rem 1rem 2rem;
