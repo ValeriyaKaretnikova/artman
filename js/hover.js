@@ -3,22 +3,20 @@ function projectHover() {
 
     projects.forEach(project => {
         project.addEventListener('mouseover', () => {
-            project.children[2].classList.add('visible');
-            project.children[1].children[0].classList.add('visible');
-            project.children[1].children[0].style.top = '2rem';
-            project.children[1].children[1].classList.add('visible');
-            project.children[1].children[1].style.top = '3.5rem';
-            project.children[1].children[2].classList.add('visible');
-            project.children[1].children[2].style.bottom = '2rem';
+            const projectHover = project.children[1];
+            const projectText = projectHover.children[0];
+            projectHover.classList.add('visible');
+            projectText.children[0].style.top = '2rem';
+            projectText.children[1].style.top = '3.5rem';
+            projectText.children[2].style.bottom = '2rem';
         })
         project.addEventListener('mouseout', (e) => {
-            project.children[2].classList.remove('visible');
-            project.children[1].children[0].classList.remove('visible');
-            project.children[1].children[0].style.top = '-2rem';
-            project.children[1].children[1].classList.remove('visible');
-            project.children[1].children[1].style.top = '-3rem';
-            project.children[1].children[2].classList.remove('visible');
-            project.children[1].children[2].style.bottom = '-2rem';
+            const projectHover = project.children[1];
+            const projectText = projectHover.children[0];
+            projectHover.classList.remove('visible');
+            projectText.children[0].style.top = '-2rem';
+            projectText.children[1].style.top = '-3.5rem';
+            projectText.children[2].style.bottom = '-2rem';
         })
     })
 }
