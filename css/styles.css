@@ -216,7 +216,7 @@ header .navigation .mainnav .menu {
   width: 100%;
   -webkit-transition: all 0.7s ease-in-out;
   transition: all 0.7s ease-in-out;
-  z-index: 25;
+  z-index: 50;
 }
 @media (min-width: 700px) {
   header .navigation .mainnav .menu {
@@ -226,11 +226,16 @@ header .navigation .mainnav .menu {
     background-color: transparent;
   }
 }
+header .navigation .mainnav .menu .menu-links {
+  margin: 2rem 0;
+  text-align: center;
+}
 header .navigation .mainnav .menu .menu-links li {
-  line-height: 2rem;
-  margin: 0 0.3rem;
+  line-height: 4rem;
+  margin: 0 auto;
 }
 header .navigation .mainnav .menu .menu-links a {
+  font-size: 1.2rem;
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   text-transform: uppercase;
@@ -245,12 +250,14 @@ header .navigation .mainnav .menu .menu-links a:hover {
 }
 @media (min-width: 700px) {
   header .navigation .mainnav .menu .menu-links a {
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
     color: #2f2f2f;
   }
 }
 @media (min-width: 960px) {
   header .navigation .mainnav .menu .menu-links a {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   header .navigation .mainnav .menu .menu-links a:hover {
     color: #f26500;
@@ -741,14 +748,16 @@ header .navigation .mainnav .show-nav {
 }
 .projects .modal .modalContent {
   max-width: 90vw;
-  max-height: 90vh;
+  max-height: 80vh;
   margin: 0 auto;
 }
 .projects .modal .modalContent .image img {
   display: inline-block;
   text-align: center;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 90vw;
-  max-height: 90vh;
+  max-height: 80vh;
 }
 .projects .modal .caption {
   margin: 1rem auto;
@@ -795,7 +804,7 @@ header .navigation .mainnav .show-nav {
 .projects .modal .close {
   position: absolute;
   top: 0;
-  right: 0.1rem;
+  right: 0.3rem;
   color: #f0f0f0;
   font-size: 3rem;
   line-height: 1;
@@ -805,12 +814,14 @@ header .navigation .mainnav .show-nav {
   cursor: pointer;
 }
 .projects .modal .close:focus {
-  color: #f26500;
+  color: #2f2f2f;
   cursor: pointer;
 }
 @media (min-width: 700px) {
   .projects .modal .close {
     font-size: 4rem;
+    right: 0.2rem;
+    line-height: 0.75;
   }
 }
 @media (min-width: 960px) {
@@ -820,7 +831,7 @@ header .navigation .mainnav .show-nav {
 }
 @media (min-width: 1140px) {
   .projects .modal .close {
-    right: 5%;
+    right: 4.4rem;
   }
 }
 .projects .modal .slick-arrow {
@@ -867,16 +878,17 @@ header .navigation .mainnav .show-nav {
 .testimonials .wrapper {
   margin: 0rem 1rem;
   text-align: center;
-  padding: 2rem 0.5rem;
-}
-@media (min-width: 960px) {
-  .testimonials .wrapper {
-    margin: 0 auto;
-  }
+  padding: 2rem 0rem;
 }
 @media (min-width: 700px) {
   .testimonials .wrapper {
     padding: 2rem 2rem;
+  }
+}
+@media (min-width: 960px) {
+  .testimonials .wrapper {
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
   }
 }
 .testimonials .testimonials-heading:before {
@@ -919,13 +931,13 @@ header .navigation .mainnav .show-nav {
 .testimonials .slick-prev:before,
 .testimonials .slick-next:before {
   color: #f26500;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 .testimonials .slick-prev {
-  left: -1.4rem;
+  left: -2.5rem;
 }
 .testimonials .slick-next {
-  right: -1rem;
+  right: -1.3rem;
 }
 .testimonials .slick-list,
 .testimonials .slick-track {
@@ -949,7 +961,7 @@ header .navigation .mainnav .show-nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
   border-radius: 7px;
 }
 .testimonials .testimonial h5 {

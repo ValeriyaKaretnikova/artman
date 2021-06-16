@@ -24,6 +24,8 @@ function displayModalImage(e) {
         infinite: true,
         autoPlay: true,
         mobileFirst: true,
+        autoplay: true,
+  autoplaySpeed: 3000,
         responsive: [
             {
               breakpoint: 960,

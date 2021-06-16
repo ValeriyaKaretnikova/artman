@@ -57,7 +57,7 @@ header {
         left: 0;
         width: 100%;
         transition: all 0.7s ease-in-out;
-        z-index: 25;
+        z-index: 50;
         @include break(med) {
           position: static;
           max-height: initial;
@@ -65,11 +65,14 @@ header {
           background-color: transparent;
         }
         .menu-links {
+          margin: 2rem 0;
+          text-align: center;
           li {
-            line-height: 2rem;
-            margin: 0 0.3rem;
+            line-height: 4rem;
+            margin: 0 auto;
           }
           a {
+            font-size: 1.2rem;
             font-family: "Raleway", sans-serif;
             text-decoration: none;
             text-transform: uppercase;
@@ -82,10 +85,12 @@ header {
               color: $orange;
             }
             @include break(med) {
+              font-size: 0.9rem;
+              margin-right: 0.5rem;
               color: $graphit;
             }
             @include break(wide) {
-              font-size: 0.9rem;
+              font-size: 1rem;
               &:hover {
                 color: $orange;
               }
@@ -99,6 +104,8 @@ header {
       }
       .show-nav {
         max-height: 100vh;
+        // overflow: visible;
+        
       }
       @include break(med) {
         display: flex;

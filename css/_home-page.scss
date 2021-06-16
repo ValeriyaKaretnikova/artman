@@ -400,17 +400,16 @@
     background-color: $graphit-trans;
     text-align: center;
     margin: 0 auto;
-
     .modalContent {
       max-width: 90vw;
-      max-height: 90vh;
+      max-height: 80vh;
       margin: 0 auto;
-
       .image img {
         display: inline-block;
         text-align: center;
+        object-fit: cover;
         max-width: 90vw;
-        max-height: 90vh;
+        max-height: 80vh;
       }
     }
     .caption {
@@ -441,7 +440,7 @@
     .close {
       position: absolute;
       top: 0;
-      right: 0.1rem;
+      right: 0.3rem;
       color: $offwhite;
       font-size: 3rem;
       line-height: 1;
@@ -450,17 +449,19 @@
           cursor: pointer;
       }
       &:focus {
-          color: $orange;
+          color: $graphit;
           cursor: pointer;
       }
       @include break(med) {
           font-size: 4rem;
+          right: 0.2rem;
+          line-height: 0.75;
         }
         @include break(wide) {
           right: 0.5rem;
         }
         @include break(exwide) {
-          right: 5%;
+          right: 4.4rem;
         }
     }
     .slick-arrow {
@@ -512,12 +513,13 @@
   .wrapper {
     margin: 0rem 1rem;
     text-align: center;
-    padding: 2rem 0.5rem;
+    padding: 2rem 0rem;
+    @include break(med) {
+     padding: 2rem 2rem;
+    }
     @include break(wide) {
         margin: 0 auto;
-      }
-      @include break(med) {
-       padding: 2rem 2rem;
+        padding: 2rem 2.5rem;
       }
   }
   .testimonials-heading:before {
@@ -560,14 +562,16 @@
   .slick-prev:before, 
   .slick-next:before {
     color: $orange;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
   .slick-prev {
-    left: -1.4rem;
+    left: -2.5rem;
+   
   }
   .slick-next {
-    right: -1rem;
-  }
+    right: -1.3rem;
+   
+}
 
   .slick-list,
   .slick-track {
@@ -582,7 +586,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 1rem; 
+    margin: 0 0.5rem; 
     border-radius: 7px;
 
     

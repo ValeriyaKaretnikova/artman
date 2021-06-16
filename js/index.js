@@ -26,21 +26,24 @@ window.addEventListener('load', function (e) {
     slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 5000,
+    arrows:true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 960,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: true
+          dots: true,
+          arrows: true
         }
       },
       {
         breakpoint: 800,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          arrows:false,
         }
       }
     ]
