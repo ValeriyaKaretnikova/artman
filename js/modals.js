@@ -18,7 +18,22 @@ function displayModalImage(e) {
     
     caption.innerHTML = imageName;
 
-    $('#' + imageName).slick();
+    $('#' + imageName).slick({
+        arrows: false,
+        dots: true,
+        infinite: true,
+        autoPlay: true,
+        mobileFirst: true,
+        responsive: [
+            {
+              breakpoint: 960,
+              settings: {
+                arrows: true
+              }
+            },
+
+          ]
+    });
     
     const closeSpan = project.querySelector('.close');
     // When the user clicks on <span> (x), close the modal
