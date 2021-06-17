@@ -25,10 +25,10 @@ function displayModalImage(e) {
         autoPlay: true,
         mobileFirst: true,
         autoplay: true,
-  autoplaySpeed: 3000,
+        autoplaySpeed: 3000,
         responsive: [
             {
-              breakpoint: 960,
+              breakpoint: 900,
               settings: {
                 arrows: true
               }
