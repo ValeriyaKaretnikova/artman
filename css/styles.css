@@ -227,7 +227,7 @@ header .navigation .mainnav .menu {
   }
 }
 header .navigation .mainnav .menu .menu-links {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   text-align: center;
 }
 header .navigation .mainnav .menu .menu-links li {
@@ -275,6 +275,7 @@ header .navigation .mainnav .menu .menu-links a:hover {
 }
 header .navigation .mainnav .show-nav {
   max-height: 100vh;
+  overflow-y: scroll;
 }
 @media (min-width: 700px) {
   header .navigation .mainnav {
@@ -738,7 +739,7 @@ header .navigation .mainnav .show-nav {
   z-index: 1;
   left: 0;
   top: 0;
-  padding-top: 2rem;
+  padding-top: 4rem;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -749,7 +750,10 @@ header .navigation .mainnav .show-nav {
 .projects .modal .modalContent {
   width: 100%;
   height: auto;
+  max-width: 100vw;
+  max-height: 80vh;
   margin: 0 auto;
+  position: relative;
 }
 .projects .modal .modalContent .image img {
   display: inline-block;
@@ -760,12 +764,12 @@ header .navigation .mainnav .show-nav {
   max-height: 80vh;
 }
 .projects .modal .caption {
-  margin: 0 auto;
+  margin: -2.3rem auto 0;
   display: block;
   width: 100%;
   text-align: center;
   color: #f0f0f0;
-  padding: 0.5rem 0;
+  padding: 0.3rem 0;
   font-size: 0.8rem;
   text-transform: uppercase;
 }
@@ -805,14 +809,14 @@ header .navigation .mainnav .show-nav {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   border-radius: 50%;
   color: #2f2f2f;
   background-color: #f0f0f0;
   opacity: 0.8;
   font-size: 3rem;
-  line-height: 2rem;
+  line-height: 1.8rem;
 }
 .projects .modal .close:hover {
   opacity: 1;
@@ -840,9 +844,13 @@ header .navigation .mainnav .show-nav {
 .projects .modal .slick-prev {
   left: 1rem;
 }
+.projects .modal .slick-dots {
+  bottom: 1rem;
+}
 .projects .modal .slick-dots li button:before {
   font-size: 10px;
   color: white;
+  text-shadow: 0px 0px 5px #2f2f2f;
 }
 
 /*------------------------Testimonials------------------------------*/

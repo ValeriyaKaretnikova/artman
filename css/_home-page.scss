@@ -390,7 +390,7 @@
     z-index: 1;
     left: 0;
     top: 0;
-    padding-top: 2rem;
+    padding-top: 4rem;
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -400,9 +400,10 @@
     .modalContent {
       width: 100%;
       height: auto;
-      // max-width: 100vw;
-      // max-height: 80vh;
+      max-width: 100vw;
+      max-height: 80vh;
       margin: 0 auto;
+      position: relative;
       .image img {
         display: inline-block;
         text-align: center;
@@ -412,12 +413,12 @@
       }
     }
     .caption {
-      margin: 0 auto;
+      margin: -2.3rem auto 0;
       display: block;
       width: 100%;
       text-align: center;
       color: $offwhite;
-      padding:  0.5rem 0;
+      padding: 0.3rem 0;
       font-size: 0.8rem;
       text-transform: uppercase;
       @include break(med) {
@@ -444,14 +445,14 @@
       position: absolute;
       top: 1rem;
       right: 1rem;
-      width: 2rem;
-      height: 2rem;
+      width: 1.8rem;
+      height: 1.8rem;
       border-radius: 50%;
       color: $graphit;
       background-color: $offwhite;
       opacity: 0.8;
       font-size: 3rem;
-      line-height: 2rem;
+      line-height: 1.8rem;
       &:hover {
         opacity: 1;
         cursor: pointer;
@@ -480,9 +481,13 @@
     .slick-prev {
       left: 1rem;
     }
+    .slick-dots{
+      bottom: 1rem;
+    }
     .slick-dots li button:before {
-      font-size: 10px;
+      font-size: 10px;  
       color: white;
+      text-shadow: 0px 0px 5px $graphit;
     }
   }
 }
