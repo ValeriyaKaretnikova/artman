@@ -1,6 +1,9 @@
 // media query breakpoints
 @mixin break($point) {
-    @if $point == small {
+    @if $point ==exsmall {
+        @media (min-width: 420px) {@content; }
+    }
+    @else if $point == small {
         @media (min-width: 540px) { @content; }
     }
     @else if $point == med {

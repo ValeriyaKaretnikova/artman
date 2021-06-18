@@ -16,9 +16,10 @@ html {
     margin: 0 auto;
 }
 
-
-
 body {
     font-family: 'Montserrat', sans-serif;
     color: $offwhite;
+}
+.lock {
+    overflow: hidden;
 }
