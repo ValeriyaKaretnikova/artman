@@ -647,7 +647,7 @@
     background-attachment: fixed;
   }
   .wrapper {
-    margin: 0rem 1rem 2rem;
+    margin: 0rem 1rem;
     text-align: center;
     padding: 3rem 0;
     @include break(med) {
@@ -753,12 +753,12 @@
 
 /*--------------------License-----------------------------------*/
 .license {
-  margin: 4rem 0rem;
+  // margin: 4rem 0rem;
   background-color: $offwhite;
-  transform: skewY(7deg);
+  // transform: skewY(7deg);
   .wrapper {
     text-align: center;
-    transform: skewY(-7deg);
+    // transform: skewY(-7deg);
     padding: 0 1rem;
     @include break(med) {
       transform: none;
@@ -773,6 +773,7 @@
     text-transform: uppercase;
     font-weight: bold;
     padding-top: 3rem;
+    margin:0;
     position: relative;
     &:before {
       content: url(../img/icons/quality.svg);

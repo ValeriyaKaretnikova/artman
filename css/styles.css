@@ -202,7 +202,7 @@ header .navigation .topnav .data a {
   font-size: 9px;
 }
 header .navigation .mainnav .logo {
-  width: 100px;
+  width: 120px;
   height: auto;
 }
 header .navigation .mainnav span {
@@ -458,6 +458,31 @@ header .navigation .mainnav .show-nav {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+#btnUp {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  bottom: 1rem;
+  right: 1rem;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#btnUp svg {
+  fill: #f26500;
+}
+#btnUp:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 /*----------------------------------------------Banner--------------------------------------------------*/
@@ -1210,7 +1235,7 @@ header .navigation .mainnav .show-nav {
   }
 }
 .join-team .wrapper {
-  margin: 0rem 1rem 2rem;
+  margin: 0rem 1rem;
   text-align: center;
   padding: 3rem 0;
 }
@@ -1319,15 +1344,10 @@ header .navigation .mainnav .show-nav {
 
 /*--------------------License-----------------------------------*/
 .license {
-  margin: 4rem 0rem;
   background-color: #f0f0f0;
-  -webkit-transform: skewY(7deg);
-          transform: skewY(7deg);
 }
 .license .wrapper {
   text-align: center;
-  -webkit-transform: skewY(-7deg);
-          transform: skewY(-7deg);
   padding: 0 1rem;
 }
 @media (min-width: 700px) {
@@ -1345,6 +1365,7 @@ header .navigation .mainnav .show-nav {
   text-transform: uppercase;
   font-weight: bold;
   padding-top: 3rem;
+  margin: 0;
   position: relative;
 }
 .license p:before {

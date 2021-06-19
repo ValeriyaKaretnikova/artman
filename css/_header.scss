@@ -41,8 +41,9 @@ header {
     .mainnav {
       // padding: 0.3rem 0;
       .logo {
-        width: 100px;
+        width: 120px;
         height: auto;
+
       }
       span {
         display: block;
@@ -255,4 +256,27 @@ header {
       }
     }
   }
+}
+
+#btnUp {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin:0;
+  position: fixed;
+  width:30px;
+  height: 30px;
+  bottom: 1rem;
+  right: 1rem;
+ transform: scale(1);
+  transition: all 0.3s ease;
+  svg {
+    fill: $orange;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
 }
