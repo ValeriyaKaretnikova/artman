@@ -939,14 +939,12 @@ header .navigation .mainnav .show-nav {
   overflow: auto;
   background-color: rgba(47, 47, 47, 0.9);
   text-align: center;
-  margin: 0 auto;
 }
 .projects .modal .modalContent {
   width: 100%;
   height: auto;
   max-width: 100vw;
   max-height: 80vh;
-  margin: 0 auto;
   position: relative;
 }
 .projects .modal .modalContent .image img {
@@ -1019,6 +1017,9 @@ header .navigation .mainnav .show-nav {
 .projects .modal .close:focus {
   opacity: 1;
   cursor: pointer;
+}
+.projects .modal .slick-track {
+  margin: 0;
 }
 .projects .modal .slick-arrow {
   width: 2.5rem;

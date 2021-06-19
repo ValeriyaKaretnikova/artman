@@ -1,5 +1,4 @@
 window.addEventListener('load', function (e) {
-    // 1. Toggle Navigation
 
     document.querySelector('.menu-toggle').addEventListener('click', () => {
         document.querySelector('nav').classList.toggle('show-nav');
@@ -98,6 +97,7 @@ window.addEventListener('load', function (e) {
 
     // 4. Modal Images
     const projectsHover = document.querySelectorAll('.project .project-hover');
+
     projectsHover.forEach((project) => {
         project.addEventListener('click', function (e) {
             const imageName = this.previousElementSibling.alt.trim();
@@ -109,7 +109,6 @@ window.addEventListener('load', function (e) {
             document.body.classList.add('lock');
 
             const modalImageName = "#" + imageName;
-
             displaySlickCarousel(modalImageName);
 
             const closeSpan = project.querySelector('.close');
@@ -165,8 +164,6 @@ window.addEventListener('load', function (e) {
             myButton.style.display = "none";
         }
     }
-
-    // When the user clicks on the button, scroll to the top of the document
     
 })
 
