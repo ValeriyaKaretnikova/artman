@@ -20,7 +20,7 @@ header {
     }
     .topnav {
       color: $graphit;
-      font-size: 9px;
+      font-size: 10px;
       padding: 0.5rem;
       justify-content: center;
       border-bottom: 1px solid $border-grey;
@@ -34,12 +34,12 @@ header {
       .data {
         color: $font-grey;
         a {
-          font-size: 9px;
+          font-size: 10px;
         }
       }
     }
     .mainnav {
-      // padding: 0.3rem 0;
+      padding: 0.3rem 0;
       .logo {
         width: 120px;
         height: auto;
@@ -260,6 +260,7 @@ header {
 
 #btnUp {
   outline: none;
+  display: none;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -269,7 +270,7 @@ header {
   height: 30px;
   bottom: 1rem;
   right: 1rem;
- transform: scale(1);
+  transform: scale(1);
   transition: all 0.3s ease;
   svg {
     fill: $orange;

@@ -181,7 +181,7 @@ header .navigation p.info {
 }
 header .navigation .topnav {
   color: #2f2f2f;
-  font-size: 9px;
+  font-size: 10px;
   padding: 0.5rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -199,7 +199,10 @@ header .navigation .topnav .data {
   color: #5A5A5A;
 }
 header .navigation .topnav .data a {
-  font-size: 9px;
+  font-size: 10px;
+}
+header .navigation .mainnav {
+  padding: 0.3rem 0;
 }
 header .navigation .mainnav .logo {
   width: 120px;
@@ -462,6 +465,7 @@ header .navigation .mainnav .show-nav {
 
 #btnUp {
   outline: none;
+  display: none;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -933,7 +937,7 @@ header .navigation .mainnav .show-nav {
   z-index: 1;
   left: 0;
   top: 0;
-  padding-top: 4rem;
+  padding-top: 3rem;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -1020,6 +1024,9 @@ header .navigation .mainnav .show-nav {
 }
 .projects .modal .slick-track {
   margin: 0;
+}
+.projects .modal .slick-dotted {
+  margin-bottom: 0;
 }
 .projects .modal .slick-arrow {
   width: 2.5rem;
