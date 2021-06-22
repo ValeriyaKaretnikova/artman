@@ -463,30 +463,95 @@ header .navigation .mainnav .show-nav {
   }
 }
 
+.fabs-contact {
+  background-color: white;
+  display: none;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  -webkit-animation: animateContacts 0.7s linear;
+          animation: animateContacts 0.7s linear;
+}
+.fabs-contact .fab-cont {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 0.3rem;
+  text-align: center;
+  color: #f26500;
+  -webkit-box-shadow: inset 0 0 3px #e5e5e5;
+          box-shadow: inset 0 0 3px #e5e5e5;
+}
+@-webkit-keyframes animateContacts {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+@keyframes animateContacts {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+#callUs {
+  left: 0;
+  bottom: 50px;
+  border-right: 1px solid #e5e5e5;
+}
+
+#emailUs {
+  right: 0;
+  bottom: 50px;
+}
+
 #btnUp {
   outline: none;
   display: none;
-  background-color: transparent;
+  background-color: #f26500;
   border: none;
+  border-radius: 50%;
   padding: 0;
-  margin: 0;
+  margin: 0 0.25rem;
+  width: 40px;
+  height: 40px;
+  color: white;
+  line-height: 50px;
+  text-align: center;
   position: fixed;
-  width: 30px;
-  height: 30px;
-  bottom: 1rem;
-  right: 1rem;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  right: 20px;
+  bottom: 20px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-}
-#btnUp svg {
-  fill: #f26500;
+  -webkit-animation: animateBtnUp 0.7s linear;
+          animation: animateBtnUp 0.7s linear;
 }
 #btnUp:hover {
   cursor: pointer;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+@-webkit-keyframes animateBtnUp {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+@keyframes animateBtnUp {
+  0% {
+    bottom: -50px;
+  }
+  100% {
+    bottom: 20px;
+  }
 }
 
 /*----------------------------------------------Banner--------------------------------------------------*/

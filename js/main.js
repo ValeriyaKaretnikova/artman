@@ -154,27 +154,23 @@ window.addEventListener('load', function (e) {
     });
 
     // 6. Button UP
-    const myButton = document.querySelector('#btnUp');
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            myButton.style.display = "block";
-        } else {
-            myButton.style.display = "none";
+    var currentY = window.scrollY;
+    window.onscroll = function () { 
+        if (window.scrollY > currentY){
+            activateFabs();
+            currentY = window.scrollY;
         }
-    }
-    
+        else if (window.scrollY < currentY) {
+            disactivateFabs();
+            currentY = window.scrollY;
+        }
+    };
+    scrollStop(activateFabs);
 })
 
 
 
 // FUNCTIONS
-
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
 function displaySlickCarousel(sliderName) {
     $(sliderName).slick({
         arrows: false,
@@ -197,4 +193,35 @@ function displaySlickCarousel(sliderName) {
 
 function disableSlickCarousel(sliderName) {
     $(sliderName).slick('unslick');
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+function activateFabs() {
+    document.querySelector('#btnUp').style.display = "none";
+    document.querySelector('.fabs-contact').style.display = "flex";
+}
+
+function disactivateFabs() {
+    document.querySelector('#btnUp').style.display = "block";
+    document.querySelector('.fabs-contact').style.display = "none";
+}
+
+function scrollStop (activateFabs, refresh = 2000) {
+    // Make sure a valid callback was provided
+    if (!activateFabs || typeof activateFabs !== 'function') return;
+    // Setup scrolling variable
+    let isScrolling;
+    // Listen for scroll events
+    window.addEventListener('scroll', function (event) {   
+        // Clear our timeout throughout the scroll
+        window.clearTimeout(isScrolling);
+        // Set a timeout to run after scrolling ends
+         isScrolling = setTimeout(activateFabs, refresh);
+
+    }, false);
+
 }
