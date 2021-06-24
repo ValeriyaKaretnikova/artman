@@ -38,6 +38,28 @@
 </head>
 
 <body>
+
+    <!-- Facebook -->
+
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1034823760653011',
+                xfbml: true,
+                version: 'v11.0'
+            });
+            FB.AppEvents.logPageView();
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <header>
         <div class="wrapper">
             <div class="navigation">
@@ -142,6 +164,8 @@
             </div>
         </div>
     </section>
+
+    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true"></div>
 
     <section class="services" id="services">
         <div class="wrapper">
@@ -675,7 +699,7 @@
                 <input type="text" name="name" id="name" placeholder="Your Name*" required>
                 <input type="email" name="email" id="email" placeholder="Your Email*" required>
                 <input type="tel" name="phone" id="phone" placeholder="Your Phone*" required>
-                <input type="text" name="subject" id="subject" placeholder="Subject" >
+                <input type="text" name="subject" id="subject" placeholder="Subject">
                 <textarea name="message" id="message" placeholder="Message Details*" rows="2" required></textarea>
                 <button type="submit" id="submit" value="submit">Send Message</button>
                 <div class="alert-message" id="alert"></div>
@@ -821,12 +845,14 @@
 
     <div class="fabs-wrapper">
         <div class="fabs-contact">
-            <a href="tel:587-785-6962" id="callUs" title="Call Us" class="fab-cont"><i class="fa fa-phone fa-2x" aria-hidden="true"></i></a>
-            <a href="mailto:info@artman-contracting.com" id="emailUs" title="Email Us" class="fab-cont"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
+            <a href="tel:587-785-6962" id="callUs" title="Call Us" class="fab-cont"><i class="fa fa-phone fa-2x"
+                    aria-hidden="true"></i></a>
+            <a href="mailto:info@artman-contracting.com" id="emailUs" title="Email Us" class="fab-cont"><i
+                    class="fa fa-envelope fa-2x" aria-hidden="true"></i></a>
         </div>
-            <a onclick="topFunction()" id="btnUp" title="Go to top" class="fab">
-                <i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i>
-            </a>
+        <a onclick="topFunction()" id="btnUp" title="Go to top" class="fab">
+            <i class="fa fa-arrow-up fa-2x" aria-hidden="true"></i>
+        </a>
     </div>
 
     <!-- jquery and slick libraries -->
