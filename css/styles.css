@@ -1310,7 +1310,7 @@ header .navigation .mainnav .show-nav {
 .join-team .wrapper {
   margin: 0rem 1rem;
   text-align: center;
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 @media (min-width: 700px) {
   .join-team .wrapper {
@@ -1489,6 +1489,97 @@ header .navigation .mainnav .show-nav {
         -ms-flex-align: center;
             align-items: center;
   }
+}
+
+.insta {
+  background-color: #2f2f2f;
+  margin: 0 0 3rem;
+  padding: 4rem 0;
+}
+.insta .insta-heading:before {
+  content: "";
+  width: 70px;
+  height: 96px;
+  border: 2px solid #f26500;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  display: block;
+  z-index: 0;
+}
+.insta .insta-heading {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+.insta .insta-heading p {
+  margin: 0;
+  font-size: 14px;
+  padding: 0.8rem 0 0.2rem;
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.08em;
+  color: #9e9e9e;
+}
+.insta .insta-heading h3 {
+  margin: 0;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+.insta .insta-heading h3:after {
+  content: ".";
+  color: #f26500;
+  font-size: 45px;
+  line-height: 1;
+  display: inline-block;
+}
+.insta #instafeed-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.insta #instafeed-container .instaItem {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 320px;
+          flex: 0 0 320px;
+  height: 320px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.insta #instafeed-container .instaItem:hover p {
+  opacity: 1;
+  top: 0;
+}
+.insta #instafeed-container .instaItem p {
+  font-size: 0.9rem;
+  color: #e5e5e5;
+  padding: 1.5rem;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: -3rem;
+  background-color: rgba(47, 47, 47, 0.9);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.insta #instafeed-container .instaItem img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*-------------------------------Footer--------------------------*/

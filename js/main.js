@@ -166,6 +166,24 @@ window.addEventListener('load', function (e) {
         }
     };
     scrollStop(activateFabs);
+
+
+    //7. Instagram Feed
+    const userFeed = new Instafeed({
+        get: 'user',
+        target: "instafeed-container",
+        resolution: 'low_resolution',
+        limit: 9,
+        template: '<div class="instaItem"><a href="{{link}}"><img alt="{{caption}}" src="{{image}}" /></a><p>{{caption}}</p></div>',
+        accessToken: 'IGQVJWTTdCTmQ5Wm5pTXpOSmNNUE1rQ1JGNFM0ejZADMjhJZAmpaSmpkWlBXSkhfZAWRTb2plUlBDeHlwN1RXOGZACdmVWN294QTJqSl9CTnpRVkRDdDl0UFB0YUwwaVZAFMWFxMUxJM0haTWhNWUJCZAy1tYwZDZD'
+    });
+    userFeed.run();
+
+    const instaPosts = document.querySelector('#instafeed-container');
+    
+    instaPosts.addEventListener('click', (e) => {
+        window.open(e.target.parentElement.querySelector('a'));
+    })
 })
 
 
